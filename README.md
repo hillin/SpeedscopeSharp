@@ -1,5 +1,5 @@
-# SpeedcoreSharp
-SpeedcoreSharp provides a profiling context for you to easily create custom profiling events in your code, 
+# SpeedscopeSharp
+SpeedscopeSharp provides a profiling context for you to easily create custom profiling events in your code, 
 and output a profiling file which can be viewed with https://www.speedscope.app/.
 
 ## Getting Started
@@ -7,11 +7,11 @@ and output a profiling file which can be viewed with https://www.speedscope.app/
 ### Installation
 Install from nuget: 
 ```
-Install-Package Hillinworks.Speedcore
+Install-Package Hillinworks.Speedscope
 ```
 or
 ```
-dotnet add package Hillinworks.Speedcore
+dotnet add package Hillinworks.Speedscope
 ```
 
 ### Profile your code
