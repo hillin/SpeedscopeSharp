@@ -1,0 +1,34 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-2019'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- task: UseDotNet@2
+  displayName: 'use .net core 3 sdk'
+  inputs:
+    packageType: sdk
+    version: 3.x
+    includePreviewVersions: true
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+    feedsToUse: 'select'
+    vstsFeed: 'hillinsilence'
+    versioningScheme: 'off'
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+- script: dotnet pack -o $(Build.ArtifactStagingDirectory)
+  displayName: dotnet pack
+- task: NuGetCommand@2
+  displayName: 'NuGet push'
+  inputs:
+    command: push
+    publishVstsFeed: 'hillinsilence'
+    allowPackageConflicts: true
