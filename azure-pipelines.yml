@@ -6,6 +6,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  solutionPath: '.\Source\Hillinworks.Speedcore.sln'
 
 steps:
 - task: UseDotNet@2
@@ -22,9 +23,9 @@ steps:
     feedsToUse: 'select'
     vstsFeed: 'hillinsilence'
     versioningScheme: 'off'
-- script: dotnet build .\Source\Hillinworks.Speedcore.sln --configuration $(buildConfiguration)
+- script: dotnet build $(solutionPath) --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- script: dotnet pack -o $(Build.ArtifactStagingDirectory)
+- script: dotnet pack $(solutionPath) -o $(Build.ArtifactStagingDirectory)
   displayName: dotnet pack
 - task: NuGetCommand@2
   displayName: 'NuGet push'
