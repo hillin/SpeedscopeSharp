@@ -22,7 +22,7 @@ steps:
     feedsToUse: 'select'
     vstsFeed: 'hillinsilence'
     versioningScheme: 'off'
-- script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet build .\Source\Hillinworks.Speedcore.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 - script: dotnet pack -o $(Build.ArtifactStagingDirectory)
   displayName: dotnet pack
