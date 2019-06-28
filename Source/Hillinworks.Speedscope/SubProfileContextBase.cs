@@ -1,7 +1,7 @@
 ﻿using System;
-using Hillinworks.Speedcore.FileFormat;
+using Hillinworks.Speedscope.FileFormat;
 
-namespace Hillinworks.Speedcore
+namespace Hillinworks.Speedscope
 {
     public abstract class SubProfileContextBase : FreezableObject
     {

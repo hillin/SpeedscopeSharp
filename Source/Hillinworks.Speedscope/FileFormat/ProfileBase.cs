@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Hillinworks.Speedcore.FileFormat
+namespace Hillinworks.Speedscope.FileFormat
 {
     internal abstract class ProfileBase : IProfile
     {

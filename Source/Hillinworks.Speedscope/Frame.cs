@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 
-namespace Hillinworks.Speedcore
+namespace Hillinworks.Speedscope
 {
     internal class Frame : IEquatable<Frame>
     {

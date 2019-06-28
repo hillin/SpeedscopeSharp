@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Hillinworks.Speedcore.FileFormat
+namespace Hillinworks.Speedscope.FileFormat
 {
     internal class Profile
     {

@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Hillinworks.Speedcore.FileFormat
+namespace Hillinworks.Speedscope.FileFormat
 {
     public enum ProfileType
     {

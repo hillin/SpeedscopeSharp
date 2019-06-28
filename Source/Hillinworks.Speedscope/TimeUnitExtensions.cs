@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hillinworks.Speedcore
+namespace Hillinworks.Speedscope
 {
     internal static class TimeUnitExtensions
     {

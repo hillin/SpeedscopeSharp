@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Hillinworks.Speedcore.FileFormat
+namespace Hillinworks.Speedscope.FileFormat
 {
     public enum EventType
     {

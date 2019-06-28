@@ -4,12 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>preview</LangVersion>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <PackageVersionSuffix>-beta</PackageVersionSuffix>
     <Authors>Lucas@Hillinworks</Authors>
-    <Description>A .NET profiling context to generate speedcore profiling file.</Description>
+    <Description>A .NET profiling context to generate speedscope profiling file.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/hillin/SpeedcoreSharp</RepositoryUrl>
+    <RepositoryUrl>https://github.com/hillin/SpeedscopeSharp</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

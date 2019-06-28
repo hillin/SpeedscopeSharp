@@ -1,6 +1,6 @@
-﻿using Hillinworks.Speedcore.FileFormat;
+﻿using Hillinworks.Speedscope.FileFormat;
 
-namespace Hillinworks.Speedcore
+namespace Hillinworks.Speedscope
 {
     public enum TimeUnit
     {

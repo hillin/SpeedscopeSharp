@@ -3,10 +3,10 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Hillinworks.Speedcore.FileFormat;
+using Hillinworks.Speedscope.FileFormat;
 using Newtonsoft.Json;
 
-namespace Hillinworks.Speedcore
+namespace Hillinworks.Speedscope
 {
     public class ProfileContext : FreezableObject
     {

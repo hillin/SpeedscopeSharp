@@ -6,7 +6,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  solutionPath: '.\Source\Hillinworks.Speedcore.sln'
+  solutionPath: '.\Source\Hillinworks.Speedscope.sln'
 
 steps:
 - task: UseDotNet@2

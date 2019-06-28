@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Hillinworks.Speedcore
+namespace Hillinworks.Speedscope
 {
     public abstract class FreezableObject
     {
