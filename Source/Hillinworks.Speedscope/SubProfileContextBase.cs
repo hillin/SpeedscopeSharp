@@ -8,7 +8,7 @@ namespace Hillinworks.Speedscope
         protected ProfileContext ProfileContext { get; }
         public string Name { get; }
         public TimeUnit TimeUnit { get; }
-        private double TickFactor { get; }
+        protected double TickFactor { get; }
         internal abstract bool IsEmpty { get; }
 
         protected double GetTimeValue(DateTime time)

@@ -59,10 +59,18 @@ namespace Hillinworks.Speedscope
                     var removeResult = this.EventHandles.TryRemove(eventHandle, out var value);
                     Debug.Assert(removeResult && value);
 
-                    if (now.Ticks > eventHandle.StartTime.Ticks + 1)
+                    var epsilon = (long)(1 / this.TickFactor * 0.001);   // 0.001 units
+
+                    if (now.Ticks - eventHandle.StartTime.Ticks <= epsilon)
                     {
-                        now = now.AddTicks(-1);
+                        // too close, pretend as if it was never happened
+                        return;
                     }
+
+                    // make some gap between this event and whatever event which may be open in the 
+                    // same time, otherwise speedscope may (mistakenly) treat this event as the parent
+                    // of the upcoming event
+                    now = now.AddTicks(-epsilon);
 
                     var closeEvent = new CloseFrameEvent(
                         this.GetTimeValue(now),
@@ -96,6 +104,8 @@ namespace Hillinworks.Speedscope
 
             var startValue = events[0].At;
             var endValue = events[events.Count - 1].At;
+
+            Debug.Assert(endValue > startValue);
 
             // leave some blank space after ended
             endValue += (endValue - startValue) * 0.2;
